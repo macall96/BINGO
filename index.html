@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>CLARA´S BINGO</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px auto;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>¡¡Clarice `s BINGO!! <BR> Edición Nochevieja</BR></h1>
+    <button onclick="generarCartones()" id="btnCartones">GENERAR CARTONES</button>
+    <button onclick="iniciarLlamados()" id="btnJugar">JUGAR</button>
+    <button onclick="pausarJuego()" id="btnPausa">PAUSAR </button></button></button>
+    <button onclick="reanudarJuego()" id="btnReanudar">REANUDAR </button></button></button>
+    <button onclick="salirDelJuego()" id="btnReinicio">REINICIAR JUEGO</button>
+   
+
+    <div id="cartones">
+        <!-- Aquí se mostrarán los cartones -->
+    </div>
+
+    <div id="numerosLlamados">
+        <!-- Aquí se mostrarán los números que van saliendo -->
+    </div>
+
+<script src="index.js"></script>  
+</body>
+</html>
