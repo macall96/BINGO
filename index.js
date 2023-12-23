@@ -7,13 +7,11 @@ const btnPausa = document.getElementById('btnPausa');
 const btnReanudar = document.getElementById('btnReanudar');
 const btnReinicio = document.getElementById('btnReinicio');
 
-
-btnPausa.hidden= true;
-btnReanudar.hidden=true;
-btnReinicio.hidden=true;
+btnPausa.hidden = true;
+btnReanudar.hidden = true;
+btnReinicio.hidden = true;
 
 let empezada = false;
-
 
 function generarCarton(nombre) {
     const carton = [];
@@ -54,20 +52,20 @@ function mostrarCartones() {
 }
 
 function generarCartones() {
-     // Detiene el intervalo
-     clearInterval(intervalId);
+    // Detiene el intervalo
+    clearInterval(intervalId);
     // Genera y muestra los cartones
     mostrarCartones();
 }
 
 function iniciarLlamados() {
     // Llama a los números cada 5 segundos
-    divCartones.innerHTML='';
-    empezada=true;
-    btnJugar.hidden=true;
-    btnCartones.hidden=true;
-    btnPausa.hidden=false;
-    btnReinicio.hidden=false;
+    divCartones.innerHTML = '';
+    empezada = true;
+    btnJugar.hidden = true;
+    btnCartones.hidden = true;
+    btnPausa.hidden = false;
+    btnReinicio.hidden = false;
     intervalId = setInterval(llamarNumero, 2200);
 }
 
@@ -86,13 +84,13 @@ function salirDelJuego() {
 }
 
 const pausarJuego = () => {
-    btnReanudar.hidden=false;
-      // Detiene el intervalo
-      clearInterval(intervalId);
+    btnReanudar.hidden = false;
+    // Detiene el intervalo
+    clearInterval(intervalId);
 }
 
 const reanudarJuego = () => {
-    btnReanudar.hidden=true;
-    //Volvemos a iniciar el intervalo
-    setInterval(llamarNumero, 2200);
+    btnReanudar.hidden = true;
+    // Reanuda el juego
+    iniciarLlamados();
 }
