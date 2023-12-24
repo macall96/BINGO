@@ -11,8 +11,6 @@ btnPausa.hidden = true;
 btnReanudar.hidden = true;
 btnReinicio.hidden = true;
 
-let empezada = false;
-
 function generarCarton(nombre) {
     const carton = [];
     while (carton.length < 15) {
