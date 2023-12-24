@@ -52,6 +52,7 @@ function mostrarCartones() {
 }
 
 function generarCartones() {
+    btnCartones.textContent= 'Dame nuevos cartones';
     // Detiene el intervalo
     clearInterval(intervalId);
     // Genera y muestra los cartones
